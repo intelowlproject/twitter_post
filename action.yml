@@ -2,30 +2,31 @@ name: publish-to-twitter
 description: posts tweets on twitter
 author: IntelOwl
 
-on:
-  release:
-    types: [released]
+inputs:
+  api_key:
+    description: "Api key"
+    required: true
+  api_key_secret:
+    description: "Api key secret"
+    required: true
+  access_token:
+    description: "Consumer access token"
+    required: true
+  access_token_secret:
+    description: "Consumer access token secret"
+    required: true
+  status:
+    description: "Status to be published to twitter"
+    required: true
 
-jobs:
-  tweet:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+outputs:
+  title:
+    description: "Post's title"
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.x
+runs:
+  using: "python3"
+  main: "twitter_post.py"
 
-      - name: Install dependencies
-        run: |
-          pip install tweepy
-
-      - name: Run tweet script
-        run: python script.py
-        env:
-          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
-          TWITTER_API_KEY_SECRET: ${{ secrets.TWITTER_API_KEY_SECRET }}
-          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+branding:
+  icon: "message-circle"
+  color: "blue"
