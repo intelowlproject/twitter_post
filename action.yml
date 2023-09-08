@@ -24,7 +24,7 @@ outputs:
     description: "Post's title"
 
 runs:
-  using: node12
+  using: "node12"
   main: "publish.py"
 
 branding:
