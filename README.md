@@ -27,8 +27,8 @@ jobs:
         uses: intelowlproject/twitter-post
         with:
           status: Add publish notes here
-          api_key: ${{ secrets.TWITTER_API_KEY }}
-          api_key_secrets: ${{ secrets.TWITTER_API_KEY_SECRET }}
-          access_token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          api_key: ${{ secrets.TWITTER_API_KEY}}
+          api_key_secrets: ${{ secrets.TWITTER_API_KEY_SECRET}}
+          access_token: ${{ secrets.TWITTER_ACCESS_TOKEN}}
+          access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET}}
 ```
