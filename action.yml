@@ -24,8 +24,7 @@ outputs:
     description: "Post's title"
 
 runs:
-  using: "python3"
-  main: "twitter_post.py"
+  main: "publish.py"
 
 branding:
   icon: "message-circle"
