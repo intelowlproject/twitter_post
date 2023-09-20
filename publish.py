@@ -15,5 +15,5 @@ client = tweepy.Client(
         access_token_secret=access_token_secret
 )
 
-tweet_content = status  # Use the 'status' input variable
+tweet_content = status
 client.create_tweet(text = tweet_content)
