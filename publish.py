@@ -1,12 +1,19 @@
 import tweepy
 import os
+import sys
+
+api_key = sys.argv[1]
+api_key_secret = sys.argv[2]
+access_token = sys.argv[3]
+access_token_secret = sys.argv[4]
+status = sys.argv[5]
 
 client = tweepy.Client(
-    consumer_key=os.environ['api_key'],
-    consumer_secret=os.environ['api_key_secret'],
-    access_token=os.environ['access_token'],
-    access_token_secret=os.environ['access_token_secret']
+        consumer_key=api_key,
+        consumer_secret=api_key_secret,
+        access_token=access_token,
+        access_token_secret=access_token_secret
 )
 
-tweet_content = os.environ['status']
+tweet_content = status  # Use the 'status' input variable
 client.create_tweet(text = tweet_content)
