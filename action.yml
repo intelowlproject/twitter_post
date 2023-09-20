@@ -25,11 +25,7 @@ outputs:
 
 runs:
   using: "composite"
-  steps:
-    - name: echo the variables
-      run: echo ${{ inputs.api_key }}
-      shell: bash
-      
+  steps:      
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -44,7 +40,7 @@ runs:
       shell: bash
 
     - name: Run tweet script
-      run: python3 script.py ${{ inputs.api_key }} ${{ inputs.api_key_secret }} ${{ inputs.access_token }} ${{ inputs.access_token_secret }}${{ inputs.status }}  
+      run: python3 script.py ${{ inputs.api_key }} ${{ inputs.api_key_secret }} ${{ inputs.access_token }} ${{ inputs.access_token_secret }} ${{ inputs.status }}  
       shell: bash
 
 branding:
