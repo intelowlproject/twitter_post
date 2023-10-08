@@ -14,17 +14,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.x
-
-      - name: Install dependencies
-        run: |
-          pip install tweepy
-
       - name: Publish tweet
-        uses: intelowlproject/twitter-post
+        uses: intelowlproject/twitter_post@main
         with:
           status: Add publish notes here
           api_key: ${{ secrets.TWITTER_API_KEY}}
