@@ -1,0 +1,19 @@
+{
+  "name": "twitter_post",
+  "version": "1.0.0",
+  "description": "action to post new releases on twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intelowlproject/twitter_post.git"
+  },
+  "author": "Shivam Purohit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/intelowlproject/twitter_post/issues"
+  },
+  "homepage": "https://github.com/intelowlproject/twitter_post#readme"
+}
