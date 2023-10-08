@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/intelowlproject/twitter_post/issues"
   },
-  "homepage": "https://github.com/intelowlproject/twitter_post#readme"
+  "homepage": "https://github.com/intelowlproject/twitter_post#readme",
+  "dependencies": {
+    "twitter-api-v2": "^1.15.1"
+  }
 }
